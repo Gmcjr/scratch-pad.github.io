@@ -22,31 +22,43 @@ E:
 
 function length(string) {
   // YOUR CODE BELOW HERE //
-
+// take input string and return its length
+return string.length;
   // YOUR CODE ABOVE HERE //
 }
 
 /**
  * Given an input String, return a new String forced to lowercase.
+ * 
+ * I: function takes a string as input
+ * O: function returns a new string forced to lowercase
+ * C:
+ * E:
  */
 function toLowerCase(string) {
   // YOUR CODE BELOW HERE //
-
+  // take input string and return new string forced to lowercase
+return string.toLowerCase();
   // YOUR CODE ABOVE HERE //
 }
 
 /**
  * Given an input String, return a new String forced to uppercase.
+ * I: function takes a string as input
+ * O: function returns a new string forced to uppercase
+ * C:
+ * E:
  */
 function toUpperCase(string) {
   // YOUR CODE BELOW HERE //
-
+// take input string and return new string forced to uppercase
+return string.toUpperCase();
   // YOUR CODE ABOVE HERE //
 }
 
 /**
  * Given an input String, return a new String forced to dash-case.
- *
+ * 
  * Examples:
  *
  *      toDashCase('Hello World'); // => 'hello-world'
@@ -56,6 +68,10 @@ function toUpperCase(string) {
  *      methods split and join?
  *
  *      See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Using_global_and_ignore_with_replace()
+ * I: function takes a string as input
+ * O: function returns a new string forced to dash-case
+ * C:
+ * E:
  */
 function toDashCase(string) {
   // YOUR CODE BELOW HERE //
@@ -74,6 +90,10 @@ function toDashCase(string) {
  *
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
+ * I: function takes one string and one single character as inputs
+ * O: function returns Boolean: true if string begins with character - otherwise false
+ * C: function is case insensitive
+ * E:
  */
 function beginsWith(string, char) {
   // YOUR CODE BELOW HERE //

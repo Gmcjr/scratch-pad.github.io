@@ -14,11 +14,17 @@
 
 /**
  * Given an input value, print the value to the screen using console.log().
+ * 
+ * I: function takes any value as input
+ * O: function prints the value to screen
+ * C: function uses console.log()
+ * E:
  */
 
 function print(value) {
   // YOUR CODE BELOW HERE //
-
+// take value as input and return value printed to screen using console.log()
+return console.log(value);
   // YOUR CODE ABOVE HERE //
 }
 
