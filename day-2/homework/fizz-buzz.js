@@ -19,23 +19,25 @@
  */
 function fizzBuzz() {
  // YOUR CODE BELOW HERE //
+var numArr = [];
 
-  // loop through numbers 1 to 100
-  for (var i = 1; i <= 100; i++) {
-  // on each iteration, check if number is multiple of 3 or 5 or both
-  // on each iteration, if number is multiple of 3 - print: "Fizz"
-  if (i % 3 === 0) {
-      console.log("Fizz");
+// loop through numbers 1 to 100
+for (var i = 1; i <= 100; i++) {
+  // on each iteration, check if number is multiple of 3, 5, or both
+  // if number is multiple of both - print: "FizzBuzz"
+  if (i % 15 === 0) {
+    console.log("FizzBuzz");
+    // if number is multiple of 3 - print: "Fizz"
+  } else if (i % 3 === 0) {
+    console.log("Fizz");
     // if number is multiple of 5 - print: "Buzz"
-    } else if (i % 5 === 0) {
-      console.log("Buzz");
-    // if number is multiple of both - print: "FizzBuzz"
-    } else if (i % 3 === 0 && i % 5 === 0) {
-      console.log("FizzBuzz");
+  } else if (i % 5 === 0) {
+    console.log("Buzz");
     // else print number
-    } else
+    } else {
       console.log(i);
   }
+}
  // YOUR CODE ABOVE HERE //
 }
 

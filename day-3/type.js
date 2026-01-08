@@ -13,10 +13,20 @@
  * work?
  *
  * HINT: There is a method that can help with this.
+ * 
+ * I: function takes any value as input
+ * O: function returns Boolean: true if input value is an array, false otherwise
+ * C:
+ * E:
  */
 function isArray(value) {
   // YOUR CODE BELOW HERE //
-
+// if/else statement to set conditions for returning true or false
+if (typeof value === array) {
+  return true;
+} else {
+  false
+}
   // YOUR CODE ABOVE HERE //
 }
 
