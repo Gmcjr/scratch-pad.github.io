@@ -143,11 +143,12 @@ return objLength;
  */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  // loop over input object
-  for (var key in object) {
-    // output values printed to console
-      console.log(object.reverse([key]));
-    }
+  // initialize a variable and assign to it the input object as an array
+var valRev = Object.values(object);
+// loop over the array in reverse and print to console
+for (var i = valRev.length -1; i >= 0; i--) {
+  console.log(valRev[i]);
+}
   // YOUR CODE ABOVE HERE //
 }
 
