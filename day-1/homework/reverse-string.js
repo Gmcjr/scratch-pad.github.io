@@ -17,11 +17,17 @@
  *     when to stop looping?
  *  c. how do you access individual characters of a String?
  *  d. how do you concatenate Strings? What operator do we use?
+ * 
+ * I: function takes a string as input
+ * O: function returns a new string representing the input string reversed
+ * C: function needs a container to collect output to return and a loop to iterate through characters
+ * E:
  */
 
 function reverseString(input) {
   // YOUR CODE BELOW HERE //
-
+  // split input string into indiv characters and re-join them in reverse order
+  return input.split('').reverse().join('');
   // YOUR CODE ABOVE HERE //
 }
 
