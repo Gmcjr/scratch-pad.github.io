@@ -53,7 +53,11 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
   // YOUR CODE BELOW HERE //
-
+  // return a function to check an input string against the startWith character for a match
+  // case insensitive
+  return function(str) {
+    return str.toLowerCase().startsWith(startsWith.toLowerCase());
+  }
   // YOUR CODE ABOVE HERE //
 }
 
@@ -63,10 +67,17 @@ function createStartsWithFilter(startsWith) {
  * character.
  *
  * This function needs to be case insensitive.
+ * 
+ * I: function takes a single character as input
+ * O: function returns a function that tests whether a given string ends with the input character
+ * C: function needs to be case insensitive
+ * E:
  */
 function createEndsWithFilter(endsWith) {
   // YOUR CODE BELOW HERE //
-
+  return function(str) {
+    return str.toLowerCase().endsWith(endsWith.toLowerCase());
+  }
   // YOUR CODE ABOVE HERE //
 }
 
@@ -84,10 +95,21 @@ function createEndsWithFilter(endsWith) {
  * 
  *    modifyString(['a', 'b'], function(str){ return str + "!" });
  *    // returns => ['a!', 'b!']
+ * 
+ * I: function takes an array of strings and a function as inputs - the function it takes, modifies strings
+ * O: function returns the input array of strings, modified
+ * C:
+ * E:
  */
 function modifyStrings(strings, modify) {
   // YOUR CODE BELOW HERE //
-
+// create new array for modified strings
+  var result = [];
+  // for loop to iterate over strings, modify, and add to new array
+  for (var i = 0; i < strings.length; i++) {
+    result.push(modify(strings[i]));
+  }
+  return result;
   // YOUR CODE ABOVE HERE //
 }
 
@@ -108,12 +130,25 @@ function modifyStrings(strings, modify) {
  * 
  *    allStringsPass(['a', 'bb', 'c'], function(str) { return string.length === 1 });
  *    // returns => false
+ * 
+ * I: function takes an array of strings and a function designed to test the string in some way
+ * O: functin returns a Boolean on whether it passed: true if all strings pass
+ * C:
+ * E:
  */
 
 
 function allStringsPass(strings, test) {
   // YOUR CODE BELOW HERE //
-
+  // create for loop to iterate over input strings
+  for (var i = 0; i < strings.length; i++) {
+  // if string does not pass test, return false
+    if (!test(strings[i])) {  
+      return false;            
+    }
+  }
+  // if all strings pass, return true
+  return true;
   // YOUR CODE ABOVE HERE //
 }
 
