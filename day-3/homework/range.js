@@ -20,10 +20,28 @@
  *  a. create something to collect the output you'll return.
  *  b. you'll need a loop, which one is best?
  *  c. you'll wanna make use of the push() method of Array.
+ * 
+ * I: function takes two integers as inputs
+ * O: function returns an array of all integers between the two input integers, inclusively
+ * C: if first arg is greater than the second, return range in reverse order 
  */
 function range(start, end) {
   // YOUR CODE BELOW HERE //
-
+// create container (array) for integers that will be returned later
+var rangeArray = [];
+  // if statement to compare inputs: if start < end loop forward, else loop backward
+if (start < end){ 
+// for loop to iterate through range starting at 'start' input and ending at 'end' input
+  for (var i = start; i <= end; i++) {
+      rangeArray.push(i);
+  } 
+  return rangeArray;
+} else {
+    for (var j = start; j >= end; j--) {
+      rangeArray.push(j);
+    }
+  }
+  return rangeArray;
   // YOUR CODE ABOVE HERE //
 }
 

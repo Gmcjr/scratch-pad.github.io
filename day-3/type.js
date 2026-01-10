@@ -21,12 +21,10 @@
  */
 function isArray(value) {
   // YOUR CODE BELOW HERE //
-// if/else statement to set conditions for returning true or false
-if (typeof value === array) {
-  return true;
-} else {
-  false
-}
+// check data type with typeof
+// check if it is an array
+typeof value;
+return Array.isArray(value);
   // YOUR CODE ABOVE HERE //
 }
 
@@ -39,14 +37,21 @@ if (typeof value === array) {
  * with typeof.
  *
  * HINT: look up how to figure out if something is an instance of the Date object.
- *
+ * 
+ * I: function takes any input value
+ * O: function returns Boolean: true if value is an Object intended as a collection, false otherwise
+ * C:
+ * E:
+ * 
  * isObject({ a: 1, b: 2 }); // true
  * isObject([1, 2, 3]); // false
  * 
  */
 function isObject(value) {
   // YOUR CODE BELOW HERE //
-  
+// check data type with typeof and return true if value is 'object' and not null, array, regex, or date
+    return typeof value === 'object' && value !== null && !Array.isArray(value) && !(value instanceof RegExp) && !(value instanceof Date);
+
   // YOUR CODE ABOVE HERE //
 }
 
@@ -55,10 +60,16 @@ function isObject(value) {
  * intended as a collection, false if otherwise.
  *
  * TIP: Similar to isObject, but we must return true if the value is an Array.
+ * 
+ * I: function takes any value as input
+ * O: function returns Boolean: true if input is either an Array or an Object
+ * C:
+ * E:
  */
 function isCollection(value) {
   // YOUR CODE BELOW HERE //
-
+// check data type of value with typeof and return true if value is 'object' and not null, regex, or date
+return typeof value === 'object' && value !== null && !(value instanceof RegExp) && !(value instanceof Date);
   // YOUR CODE ABOVE HERE //
 }
 
@@ -80,9 +91,22 @@ function isCollection(value) {
  *    typeOf(134) -> "number"
  *    typeOf("javascript") -> "string"
  *    typeOf([1,2,3]) -> "array"
+ * 
+ * I: function takes any value as input
+ * O: function returns value type as a string
+ * C:
+ * E:
  */
 function typeOf(value) {
   // YOUR CODE BELOW HERE //
+  // find data type of input value and return the type as a string
+  var return_value = Object.prototype.toString.call(value);
+   
+    var type = return_value.substring(
+             return_value.indexOf(" ") + 1, 
+             return_value.indexOf("]"));
+  
+    return type.toLowerCase();
   
   // YOUR CODE ABOVE HERE //
 }

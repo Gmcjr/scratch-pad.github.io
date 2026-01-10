@@ -10,10 +10,18 @@
  * Given an input base to test against, which could be a String or Number,
  * return a Function that tests whether a given value is greater than the
  * base.
+ * 
+ * I: function takes a base of a string or number
+ * O: function returns another function that tests whether a given value is greater than the base
+ * C: 
+ * E:
  */
 function createGreaterThanFilter(base) {
   // YOUR CODE BELOW HERE //
-  
+  // create function to return as output that tests whether a given value is greater than the base (input)
+  return function(value) {
+    return (value > base);
+}
   // YOUR CODE ABOVE HERE //
 }
 
@@ -25,7 +33,9 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
   // YOUR CODE BELOW HERE //
-  
+  return function(value) {
+    return (value < base);
+}
   // YOUR CODE ABOVE HERE //
 }
 
@@ -35,6 +45,11 @@ function createLessThanFilter(base) {
  * character.
  *
  * This function needs to be case insensitive.
+ * 
+ * I: function takes a single character as input
+ * O: function returns a function that tests whether a given string starts with the input character
+ * C: function needs to be case insensitive
+ * E:
  */
 function createStartsWithFilter(startsWith) {
   // YOUR CODE BELOW HERE //

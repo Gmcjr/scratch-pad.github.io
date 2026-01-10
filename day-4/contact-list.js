@@ -5,7 +5,7 @@
 /**
  * 4: Contact List // Contacts
  *
- *  a. Create a factory Function called makeContact(id, nameFirst, nameLast)
+ *  a. Create a factory Function *(a function that returns an object) called makeContact(id, nameFirst, nameLast)
  *     that returns a contact object.
  *
  *          ex: makeContact(1, 'Max', 'Gaudin'); // => {id: 1, nameFirst: 'Max', nameLast: 'Gaudin'}
@@ -48,7 +48,20 @@ function makeContactList() {
     length: function(){
       return contacts.length;
     },
-  }
+    addContact: function(contact){
+    
+    },
+    findContact: function(fullName){
+      
+    },
+    removeContact: function(){
+
+    },
+    printAllContactNames: function(){
+
+    },
+
+ }
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
