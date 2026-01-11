@@ -35,6 +35,8 @@
 
 function makeContact(id, nameFirst, nameLast) {
   // Solve this function first
+  var contact = { id,  nameFirst, nameLast };
+  return contact;
 }
 
 function makeContactList() {
@@ -49,16 +51,33 @@ function makeContactList() {
       return contacts.length;
     },
     addContact: function(contact){
-    
+    contacts.push(contact);
     },
     findContact: function(fullName){
-      
+      for (var i = 0; i < contacts.length; i++) {
+        // on each iteration, check the nameFirst, nameLast properties and compare to fullName input
+        var checkName = contacts[i].nameFirst + " " + contacts[i].nameLast;
+        if (checkName === fullName){
+          return contacts[i];
+        }
+      }
     },
-    removeContact: function(){
-
+    removeContact: function(contact){
+      var index = contacts.indexOf(contact)
+      contacts.splice(index, 1);
     },
     printAllContactNames: function(){
-
+      // create variable to hold names
+      var allNames = '';
+      // for loop to iterate over contacts array and build string of all full names
+      for (var i = 0; i < contacts.length; i++) {
+        allNames+= contacts[i].nameFirst + ' ' + contacts[i].nameLast;
+        // add line break between each name
+        if (i < contacts.length -1) {
+          allNames += '\n';
+        }
+      }
+      return allNames;
     },
 
  }
